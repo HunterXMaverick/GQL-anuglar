@@ -8,8 +8,8 @@ type Curso {
 
 type Estudiante {
   _id: ID!
-  nombre: String!
-  email: String!
+  nombre: String
+  email: String
 }
 
 type Query {
@@ -21,4 +21,35 @@ type Query {
   getEstudiante(id: ID!):Estudiante
 }
 
+input CursoInput{
+    titulo: String!
+    profesor: String!
+    descripcion: String!
+    genero: String!
+}
 
+input EstudianteInput {
+  nombre: String!
+  email: String!
+}
+
+input CursoEditarInput{
+    titulo: String!
+    profesor: String!
+    descripcion: String!
+    genero: String!
+}
+
+input EstudianteEditarInput {
+  nombre: String!
+  email: String!
+}
+
+
+type Mutation {
+  nuevoCurso(input: CursoInput!): Curso
+  editarCurso(id: ID!, input: CursoEditarInput): Curso
+
+  nuevoEstudiante(input: EstudianteInput!): Estudiante
+  editarEstudiante(id: ID!, input: EstudianteEditarInput): Estudiante
+}

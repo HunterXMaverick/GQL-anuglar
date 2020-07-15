@@ -1,26 +1,10 @@
 ;
 'use strict'
 
-const cursos = [
-    {
-        id: '1',
-        titulo: 'libro 1',
-        profesor: 'Juan Silva',
-        descripcion: 'el nuevo mundo',
-        genero: 'accion'
-    },
-    {
-        id: '2',
-        titulo: 'libro 2',
-        profesor: 'Emy',
-        descripcion: 'Rose',
-        genero: 'drama'
-    }
-]
+const cursosQuery = require('./queries/cursos.querys')
+const cursosMutation = require('./mutations/curso.mutation')
+
 module.exports = {
-    Query:{
-        getCursos: () =>{
-            return cursos
-        }
-    }
+    Query: cursosQuery,
+    Mutation: cursosMutation
 }

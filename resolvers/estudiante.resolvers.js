@@ -1,10 +1,11 @@
 ;
 'use strict'
 
-const estudianteQueries = require('./queries/estudiante.querys')
-//const estudianteMutation = require('./mutations/estudiante.mutation')
+const estudianteQuery = require('./queries/estudiante.querys')
+
+const estudianteMutation = require('./mutations/estudiante.mutation')
 
 module.exports = {
-    Query: estudianteQueries,
-    //Mutation: estudianteMutation
+    Query: estudianteQuery,
+    Mutation: estudianteMutation
 }
