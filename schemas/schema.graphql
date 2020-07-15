@@ -1,0 +1,24 @@
+type Curso {
+    _id: ID
+    titulo: String
+    profesor: String
+    descripcion: String
+    genero: String
+}
+
+type Estudiante {
+  _id: ID!
+  nombre: String!
+  email: String!
+}
+
+type Query {
+  hello: String
+  saludo: String
+  getCurso: [Curso]
+  getCursos(id: ID!): Curso
+  getEstudiantes: [Estudiante]
+  getEstudiante(id: ID!):Estudiante
+}
+
+
